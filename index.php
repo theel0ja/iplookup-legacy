@@ -25,7 +25,7 @@
     $jsona = file_get_contents("http://ipinfo.io/".$q);
     $data = json_decode($jsona, TRUE);
     
-    $jsonb = file_get_contents("http://country.io/names.json");
+    $jsonb = file_get_contents("https://mirror.theel0ja.info/country.io/names.json");
     $countrydata = json_decode($jsonb, TRUE);
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://cdn.rawgit.com" />
+        <link rel="dns-prefetch" href="https://files.tuotteet.or"g />
         <!-- Preload (noscript) -->
         <noscript>
             <link rel="dns-prefetch" href="https://maps.googleapis.com/" />
@@ -89,7 +89,7 @@
                   <th scope="row">Continent</th>
                   <td><a href="https://en.wikipedia.org/wiki/Europe">Europe</a></td>
                   <td><b>Flag</b></td>
-                  <td><img src="https://cdn.rawgit.com/linuxmint/iso-country-flags-svg-collection/master/svg/country-4x3/<?php echo strtolower($data["country"]); ?>.svg" alt="<?php echo $data["country"]; ?>" width="27" /></td>
+                  <td><img src="https://files.tuotteet.org/flag/4x3/<?php echo strtolower($data["country"]); ?>.svg" alt="<?php echo $data["country"]; ?>" width="27" /></td>
                 </tr>
                 <tr>
                   <th scope="row">Country</th>
