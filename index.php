@@ -65,10 +65,10 @@
         <!-- Map -->
         <div class="container">
             <div class="text-center" id="map">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $data["loc"]; ?>&zoom=9&size=640x200&sensor=false" />
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $data["loc"]; ?>&zoom=9&size=640x200" width="640" height="200" alt="Google Maps Image" />
                 
                 <noscript>
-                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $data["loc"]; ?>&zoom=9&size=640x200&sensor=false" />
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php echo $data["loc"]; ?>&zoom=9&size=640x200" width="640" height="200" alt="Google Maps Image" />
                 </noscript>
             </div>
         </div>
@@ -90,7 +90,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Continent</th>
-                  <td><a href="https://en.wikipedia.org/wiki/<?php echo $countinentdata[$data["country"]]; ?>"><?php echo $countinentdata[$data["country"]]; ?></a></td>
+                  <td><a href="https://en.wikipedia.org/wiki/<?php echo $countinentdata[$data["country"]]; ?>_(disambiguation)#Places"><?php echo $countinentdata[$data["country"]]; ?></a></td>
                   <td><b>Flag</b></td>
                   <td><img src="https://files.tuotteet.org/flag/4x3/<?php echo strtolower($data["country"]); ?>.svg" alt="<?php echo $data["country"]; ?>" width="27" /></td>
                 </tr>
