@@ -27,6 +27,9 @@
     
     $jsonb = file_get_contents("https://mirror.theel0ja.info/country.io/names.json");
     $countrydata = json_decode($jsonb, TRUE);
+
+    $jsonc = file_get_contents("https://mirror.theel0ja.info/country.io/continent.json");
+    $countinentdata = json_decode($jsonc, TRUE);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +41,7 @@
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="https://files.tuotteet.or"g />
+        <link rel="dns-prefetch" href="https://files.tuotteet.org" />
         <!-- Preload (noscript) -->
         <noscript>
             <link rel="dns-prefetch" href="https://maps.googleapis.com/" />
@@ -87,7 +90,7 @@
                 </tr>
                 <tr>
                   <th scope="row">Continent</th>
-                  <td><a href="https://en.wikipedia.org/wiki/Europe">Europe</a></td>
+                  <td><a href="https://en.wikipedia.org/wiki/<?php echo $countinentdata[$data["country"]]; ?>"><?php echo $countinentdata[$data["country"]]; ?></a></td>
                   <td><b>Flag</b></td>
                   <td><img src="https://files.tuotteet.org/flag/4x3/<?php echo strtolower($data["country"]); ?>.svg" alt="<?php echo $data["country"]; ?>" width="27" /></td>
                 </tr>
